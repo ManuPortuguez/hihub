@@ -353,8 +353,15 @@ section {
     fill: #FFF;
 }
 
-/* Desktop header scroll styles */
+/* Desktop header - sticky with scroll styles */
 @media (min-width: 769px) {
+    header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        transition: all 0.3s ease;
+    }
+    
     header.clone {
         background: #ffffff !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
@@ -384,8 +391,11 @@ section {
 
 /* Responsive Typography */
 @media (max-width: 768px) {
-    /* Header with white background for mobile */
+    /* Header sticky with white background for mobile */
     header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
         background: #ffffff !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
         margin: 0 !important;

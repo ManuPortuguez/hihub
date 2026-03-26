@@ -353,6 +353,13 @@ section {
     fill: #FFF;
 }
 
+/* Override header-static absolute positioning */
+header.header-static {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+
 /* Desktop header - sticky with scroll styles */
 @media (min-width: 769px) {
     header {

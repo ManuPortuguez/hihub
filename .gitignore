@@ -1,8 +1,12 @@
-# Large video files
-*.mp4
+# Large video files (exclude all except hihub video.mp4)
 *.mov
 *.avi
 *.mkv
+# Exclude large mp4 files but allow hihub video.mp4
+images/*.mp4
+template/images/*.mp4
+Hero.mp4
+*containers.mp4
 
 # OS files
 .DS_Store

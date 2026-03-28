@@ -23,26 +23,54 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
             const segments = node.split(/<br\s*\/?>/gi);
             
             return segments.map((segment, segIndex) => {
-                const chars = segment.split("").map((char, index) => (
-                    <motion.span
-                        key={`${parentKey}-seg${segIndex}-char-${index}-${char}`}
-                        variants={getCharVariants()}
-                        style={{ display: "inline-block", whiteSpace: "pre" }}
-                    >
-                        {char === " " ? "\u00A0" : char}
-                    </motion.span>
-                ));
+                // Split by words instead of characters to prevent word breaking
+                const words = segment.split(/(\s+)/);
+                
+                const wordSpans = words.map((word, wordIndex) => {
+                    if (word.match(/^\s+$/)) {
+                        // Handle whitespace
+                        return (
+                            <motion.span
+                                key={`${parentKey}-seg${segIndex}-word-${wordIndex}`}
+                                variants={getCharVariants()}
+                                style={{ display: "inline-block", whiteSpace: "pre" }}
+                            >
+                                {word}
+                            </motion.span>
+                        );
+                    }
+                    
+                    // For actual words, wrap each character but keep word together
+                    const chars = word.split("").map((char, charIndex) => (
+                        <motion.span
+                            key={`${parentKey}-seg${segIndex}-word${wordIndex}-char-${charIndex}`}
+                            variants={getCharVariants()}
+                            style={{ display: "inline" }}
+                        >
+                            {char}
+                        </motion.span>
+                    ));
+                    
+                    return (
+                        <span
+                            key={`${parentKey}-seg${segIndex}-word-${wordIndex}`}
+                            style={{ display: "inline-block", whiteSpace: "nowrap" }}
+                        >
+                            {chars}
+                        </span>
+                    );
+                });
                 
                 // Add line break after each segment except the last one
                 if (segIndex < segments.length - 1) {
                     return (
                         <React.Fragment key={`${parentKey}-seg${segIndex}`}>
-                            {chars}
+                            {wordSpans}
                             <br />
                         </React.Fragment>
                     );
                 }
-                return <React.Fragment key={`${parentKey}-seg${segIndex}`}>{chars}</React.Fragment>;
+                return <React.Fragment key={`${parentKey}-seg${segIndex}`}>{wordSpans}</React.Fragment>;
             });
         }
 

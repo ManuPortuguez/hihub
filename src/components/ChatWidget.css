@@ -2,7 +2,7 @@
 
 .hihub-chat-widget-container {
   position: fixed;
-  bottom: 100px;
+  bottom: 120px;
   right: 20px;
   z-index: 9999;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -435,7 +435,7 @@
 
 @media (max-width: 768px) {
   .hihub-chat-widget-container {
-    bottom: 20px;
+    bottom: 80px;
     right: 15px;
   }
 
@@ -453,7 +453,7 @@
     width: calc(100vw - 30px);
     max-width: 360px;
     height: 500px;
-    bottom: 65px;
+    bottom: 95px;
     right: 0;
   }
 

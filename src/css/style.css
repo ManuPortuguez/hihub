@@ -2341,6 +2341,167 @@ ul.ct-list li:before {
 	}
 }
 
+/* Mobile CTA Section Styles for Header-2 */
+.mobile-cta-section {
+	padding: 0 5px;
+}
+
+.mobile-cta-section .mobile-language-selector {
+	width: 100%;
+}
+
+.mobile-cta-section .mobile-language-selector .dropdown-toggle {
+	width: 100%;
+	padding: 12px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	color: var(--white);
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mobile-cta-section .mobile-language-selector .dropdown-toggle:hover,
+.mobile-cta-section .mobile-language-selector .dropdown-toggle:focus {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mobile-cta-section .mobile-language-selector .dropdown-menu {
+	width: 100%;
+	border-radius: 8px;
+	margin-top: 4px;
+}
+
+.mobile-cta-section .btn-outline-light {
+	border-color: rgba(255, 255, 255, 0.3);
+	color: var(--white);
+	font-weight: 500;
+	font-size: 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.mobile-cta-section .btn-outline-light:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.5);
+	color: var(--white);
+}
+
+.mobile-cta-section .btn-outline-light i,
+.mobile-cta-section .btn-outline-light svg {
+	font-size: 14px;
+}
+
+.mobile-cta-section .btn-primary {
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+	transition: all 0.3s ease;
+}
+
+.mobile-cta-section .btn-primary:hover {
+	box-shadow: 0 6px 16px rgba(255, 193, 7, 0.4);
+	transform: translateY(-1px);
+}
+
+/* Improve mobile offcanvas body spacing */
+@media (max-width:1199.98px) {
+	.header.header-2 .offcanvas-body {
+		padding: 20px !important;
+	}
+	
+	.header.header-2 .offcanvas-header {
+		padding: 20px;
+	}
+	
+	/* Better touch targets for mobile nav links */
+	.header.header-2 .navbar-nav .nav-item .nav-link {
+		padding: 18px 0 !important;
+		font-size: 17px;
+		font-weight: 500;
+	}
+	
+	/* Better spacing for dropdown items */
+	.header.header-2 .dropdown-menu .dropdown-item {
+		padding: 14px 20px;
+		font-size: 15px;
+	}
+}
+
+/* Extra small devices */
+@media (max-width:575.98px) {
+	.mobile-cta-section .btn-outline-light span {
+		font-size: 13px;
+	}
+	
+	.mobile-cta-section .btn-primary {
+		font-size: 15px;
+	}
+}
+
+/* Mobile CTA Section for Header-One (light background) */
+.header-default .mobile-cta-section {
+	border-color: var(--border-color) !important;
+}
+
+.header-default .mobile-cta-section .btn-primary {
+	box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+/* Mobile CTA Section for Header-Three (white background) */
+.header.header-3 .mobile-cta-section {
+	border-color: var(--border-color) !important;
+}
+
+.header.header-3 .mobile-cta-section .btn-outline-primary {
+	border-color: var(--primary);
+	color: var(--primary);
+	font-weight: 500;
+	font-size: 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.header.header-3 .mobile-cta-section .btn-outline-primary:hover {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.header.header-3 .mobile-cta-section .btn-outline-dark {
+	border-color: var(--dark);
+	color: var(--dark);
+	font-weight: 500;
+	font-size: 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.header.header-3 .mobile-cta-section .btn-outline-dark:hover {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+.header.header-3 .mobile-cta-section .btn-primary {
+	box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+/* Improve mobile offcanvas for header-one and header-three */
+@media (max-width:1199.98px) {
+	.header-default .offcanvas-body,
+	.header.header-3 .offcanvas-body {
+		padding: 20px !important;
+	}
+	
+	.header-default .offcanvas-header,
+	.header.header-3 .offcanvas-header {
+		padding: 20px;
+	}
+}
+
 .header.header-3 {
 	height: 50px
 }

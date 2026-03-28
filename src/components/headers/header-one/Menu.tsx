@@ -3,8 +3,10 @@ import Logo from "@/images/logo.svg";
 import { useContext } from 'react';
 import ProjectContext from '@/components/context/ProjectContext';
 import MenuList from "@/components/MenuList";
+import { useTranslation } from "react-i18next";
 
 export default function Menu() {
+    const { t } = useTranslation();
     const context = useContext(ProjectContext);
     if (!context) throw new Error("Context Null");
     const { isMobile, setIsMobile } = context;
@@ -57,6 +59,20 @@ export default function Menu() {
 
                     <div className="offcanvas-body pt-0 align-items-center justify-content-between">
                         <MenuList />
+                        
+                        {/* Mobile CTA Section */}
+                        <div className="mobile-cta-section d-lg-none mt-4 pt-4 border-top">
+                            <button 
+                                onClick={() => {
+                                    window.dispatchEvent(new CustomEvent('openChatWidget'));
+                                    setIsMobile(false);
+                                }}
+                                className="btn btn-primary btn-hover w-100 py-3 fs-6 fw-semibold"
+                            >
+                                {t('nav.contactUs', 'Contáctanos')} <i className="fa fa-arrow-right ms-2"></i>
+                                <span></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

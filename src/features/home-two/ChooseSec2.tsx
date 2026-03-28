@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import TextAnimation from "@/components/elements/TextAnimation";
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
 import { 
@@ -11,7 +12,7 @@ import {
 } from 'lucide-react';
 
 export default function ChooseSec2() {
-    const { t } = useTranslation();
+    const { t }: { t: TFunction } = useTranslation();
 
     const services = [
         {

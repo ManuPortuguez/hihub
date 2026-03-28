@@ -248,11 +248,15 @@ export default function OperationSec() {
                             {slides.map((slide) => (
                                 <SwiperSlide key={slide.id}>
                                     <div className="operation-content px-2">
-                                        <div className="mb-3 p-3 rounded-3" style={{ backgroundColor: '#020e28', border: '2px solid #FFC107' }}>
-                                            <h3 className="h5 mb-2" style={{ color: '#FFC107' }}>
+                                        <div className="mb-3 p-4 rounded-3" style={{ 
+                                            backgroundColor: 'rgba(255, 255, 255, 0.07)', 
+                                            border: '1px solid rgba(255, 255, 255, 0.07)',
+                                            borderLeft: '5px solid #FFC107'
+                                        }}>
+                                            <h3 className="h4 mb-3" style={{ color: '#ffffff' }}>
                                                 {slide.title}
                                             </h3>
-                                            <p className="mb-0" style={{ color: '#ffffff', fontSize: '0.9rem' }}>
+                                            <p className="mb-0" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
                                                 {slide.desc}
                                             </p>
                                         </div>

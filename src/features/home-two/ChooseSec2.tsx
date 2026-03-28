@@ -15,48 +15,48 @@ export default function ChooseSec2() {
 
     const services = [
         {
-            title: "Sourcing and Procurement",
+            title: t('choose2.sourcing.title'),
             icon: Search,
             items: [
-                "Identify and evaluate suppliers to source goods and materials.",
-                "Negotiate prices and terms to ensure the best deals for clients."
+                t('choose2.sourcing.item1'),
+                t('choose2.sourcing.item2')
             ]
         },
         {
-            title: "Quality Control and Inspection",
+            title: t('choose2.quality.title'),
             icon: ShieldCheck,
             items: [
-                "Conduct quality checks and inspections on products before shipment.",
-                "Ensure compliance with safety and quality standards."
+                t('choose2.quality.item1'),
+                t('choose2.quality.item2')
             ]
         },
         {
-            title: "Logistics and Shipping",
+            title: t('choose2.logistics.title'),
             icon: Ship,
             items: [
-                "Manage the transportation and logistics of goods from suppliers to clients.",
-                "Handle customs clearance and documentation for international shipments."
+                t('choose2.logistics.item1'),
+                t('choose2.logistics.item2')
             ]
         },
         {
-            title: "Consulting Services",
+            title: t('choose2.consulting.title'),
             icon: Lightbulb,
             items: [
-                "Offer strategic advice on entering new markets, navigating regulations, and optimizing supply chains."
+                t('choose2.consulting.item1')
             ]
         },
         {
-            title: "International Fairs",
+            title: t('choose2.fairs.title'),
             icon: Globe,
             items: [
-                "Attending China's largest trade fair gives you the chance to build relationships with around 25,000 suppliers and is the best place to look for business opportunities and bring them back to your country."
+                t('choose2.fairs.item1')
             ]
         },
         {
-            title: "IT Services",
+            title: t('choose2.it.title'),
             icon: Monitor,
             items: [
-                "IT services encompass a broad range of technology solutions designed to support businesses in managing their digital infrastructure, improving efficiency, and driving growth."
+                t('choose2.it.item1')
             ]
         }
     ];
@@ -75,11 +75,11 @@ export default function ChooseSec2() {
                         </span>
                         <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3' }}>
                             <TextAnimation animationStyle="style1">
-                                Strategic Solutions for Your Business
+                                {t('choose2.mainTitle')}
                             </TextAnimation>
                         </h2>
                         <p className="lead mt-3 text-center" style={{ color: '#ffffff', maxWidth: '800px', margin: '0 auto' }}>
-                            We provide strategic, high-impact solutions designed to meet the specific demands of your business.
+                            {t('choose2.mainSubtitle')}
                         </p>
                     </div>
 

@@ -93,6 +93,25 @@ const resources = {
       "services2.packingHandling": "Packing & Handling",
       "services2.floorPlanning": "Floor Planning",
 
+      // Choose Section 2 - Detailed Services
+      "choose2.mainTitle": "Strategic Solutions for Your Business",
+      "choose2.mainSubtitle": "We provide strategic, high-impact solutions designed to meet the specific demands of your business.",
+      "choose2.sourcing.title": "Sourcing and Procurement",
+      "choose2.sourcing.item1": "Identify and evaluate suppliers to source goods and materials.",
+      "choose2.sourcing.item2": "Negotiate prices and terms to ensure the best deals for clients.",
+      "choose2.quality.title": "Quality Control and Inspection",
+      "choose2.quality.item1": "Conduct quality checks and inspections on products before shipment.",
+      "choose2.quality.item2": "Ensure compliance with safety and quality standards.",
+      "choose2.logistics.title": "Logistics and Shipping",
+      "choose2.logistics.item1": "Manage the transportation and logistics of goods from suppliers to clients.",
+      "choose2.logistics.item2": "Handle customs clearance and documentation for international shipments.",
+      "choose2.consulting.title": "Consulting Services",
+      "choose2.consulting.item1": "Offer strategic advice on entering new markets, navigating regulations, and optimizing supply chains.",
+      "choose2.fairs.title": "International Fairs",
+      "choose2.fairs.item1": "Attending China's largest trade fair gives you the chance to build relationships with around 25,000 suppliers and is the best place to look for business opportunities and bring them back to your country.",
+      "choose2.it.title": "IT Services",
+      "choose2.it.item1": "IT services encompass a broad range of technology solutions designed to support businesses in managing their digital infrastructure, improving efficiency, and driving growth.",
+
       // Operations Section
       "ops.subtitle": "Our Channel Services",
       "ops.title": "Tailored Freight Solutions for Every Business",
@@ -280,6 +299,25 @@ const resources = {
       "services2.airConsulting": "Consultoría Aérea",
       "services2.packingHandling": "Embalaje y Manejo",
       "services2.floorPlanning": "Planificación de Espacio",
+
+      // Choose Section 2 - Detailed Services
+      "choose2.mainTitle": "Soluciones Estratégicas para tu Negocio",
+      "choose2.mainSubtitle": "Brindamos soluciones estratégicas de alto impacto diseñadas para satisfacer las demandas específicas de tu negocio.",
+      "choose2.sourcing.title": "Abastecimiento y Adquisiciones",
+      "choose2.sourcing.item1": "Identificar y evaluar proveedores para abastecerte de bienes y materiales.",
+      "choose2.sourcing.item2": "Negociar precios y términos para garantizar los mejores acuerdos para los clientes.",
+      "choose2.quality.title": "Control de Calidad e Inspección",
+      "choose2.quality.item1": "Realizar controles de calidad e inspecciones en productos antes del envío.",
+      "choose2.quality.item2": "Garantizar el cumplimiento de normas de seguridad y calidad.",
+      "choose2.logistics.title": "Logística y Envío",
+      "choose2.logistics.item1": "Gestionar el transporte y la logística de mercancías de proveedores a clientes.",
+      "choose2.logistics.item2": "Manejar el despacho aduanero y la documentación para envíos internacionales.",
+      "choose2.consulting.title": "Servicios de Consultoría",
+      "choose2.consulting.item1": "Ofrecer asesoramiento estratégico para entrar en nuevos mercados, navegar regulaciones y optimizar cadenas de suministro.",
+      "choose2.fairs.title": "Ferias Internacionales",
+      "choose2.fairs.item1": "Asistir a la feria comercial más grande de China te da la oportunidad de construir relaciones con alrededor de 25,000 proveedores y es el mejor lugar para buscar oportunidades de negocio y llevarlas a tu país.",
+      "choose2.it.title": "Servicios de TI",
+      "choose2.it.item1": "Los servicios de TI abarcan una amplia gama de soluciones tecnológicas diseñadas para apoyar a las empresas en la gestión de su infraestructura digital, mejorar la eficiencia e impulsar el crecimiento.",
 
       // Operations Section
       "ops.subtitle": "Nuestros Servicios",

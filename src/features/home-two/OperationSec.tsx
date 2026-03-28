@@ -4,7 +4,6 @@ import TabIcon from "@/images/tab-icon.png";
 import TabMain1 from "@/images/air.jpg";
 import TabMain2 from "@/images/Warehousing.jpg";
 import TabMain3 from "@/images/road.jpg";
-import OptBg from "@/images/opt-bg.png";
 import TextAnimation from "@/components/elements/TextAnimation"
 export default function OperationSec() {
     const { t } = useTranslation();

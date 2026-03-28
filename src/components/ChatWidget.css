@@ -433,15 +433,111 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 480px) {
-  .hihub-chat-panel {
-    width: calc(100vw - 40px);
-    height: calc(100vh - 100px);
-    bottom: 80px;
-    right: 10px;
+@media (max-width: 768px) {
+  .hihub-chat-widget-container {
+    bottom: 20px;
+    right: 15px;
   }
-  
+
+  .hihub-chat-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hihub-chat-button svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hihub-chat-panel {
+    width: calc(100vw - 30px);
+    max-width: 360px;
+    height: 500px;
+    bottom: 65px;
+    right: 0;
+  }
+
+  .hihub-chat-header {
+    padding: 12px 16px;
+  }
+
+  .hihub-agent-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hihub-agent-info h3 {
+    font-size: 14px;
+  }
+
+  .hihub-status {
+    font-size: 11px;
+  }
+
+  .hihub-messages-container {
+    padding: 16px;
+  }
+
+  .hihub-message {
+    margin-bottom: 12px;
+    max-width: 90%;
+  }
+
+  .hihub-message-content {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .hihub-message-image {
+    max-width: 150px;
+    max-height: 120px;
+  }
+
+  .hihub-calendar-picker,
+  .hihub-booking-form,
+  .hihub-confirmation {
+    margin: 12px;
+    padding: 12px 16px;
+  }
+
+  .hihub-calendar-picker h4,
+  .hihub-booking-form h4 {
+    font-size: 13px;
+  }
+
   .hihub-slots-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .hihub-slot-btn {
+    padding: 8px 6px;
+    font-size: 10px;
+  }
+
+  .hihub-input-area {
+    padding: 10px 12px;
+  }
+
+  .hihub-input-row input[type="text"] {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .hihub-send-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hihub-attach-btn {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hihub-chat-panel {
+    width: calc(100vw - 20px);
+    height: 450px;
+    max-width: none;
   }
 }

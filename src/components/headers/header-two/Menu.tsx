@@ -26,8 +26,8 @@ export default function Menu({ currentLanguage, setCurrentLanguage }: MenuProps)
                     onClick={() => setIsMobile(pre => !pre)}
                     className="navbar-toggler offcanvas-nav-btn"
                     type="button"
+                    aria-label="Menu"
                 >
-                    Menu
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"

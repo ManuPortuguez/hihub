@@ -9,7 +9,7 @@ export default function Menu() {
     const { t } = useTranslation();
     const context = useContext(ProjectContext);
     if (!context) throw new Error("Context Null");
-    const { setIsSearch, setIsSidebar, isMobile, setIsMobile } = context;
+    const { setIsSearch, isMobile, setIsMobile } = context;
     return (
         <>
             <div className="container ct-container">
@@ -55,20 +55,6 @@ export default function Menu() {
                             Free Quote <i className="fa fa-arrow-right"></i>
                             <span></span>
                         </Link>
-                        <button onClick={() => setIsSidebar(pre => !pre)} className="burger-menu icon-lg bg-dark text-white rounded-circle">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="14"
-                                height="12"
-                                fill="none"
-                                viewBox="0 0 14 12"
-                            >
-                                <path
-                                    fill="#fff"
-                                    d="M0 .75Q.063.063.75 0h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 1.437 0 .75m0 5Q.063 5.063.75 5h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 6.437 0 5.75m13.25 5.75H.75q-.687-.063-.75-.75.063-.687.75-.75h12.5q.687.063.75.75-.063.687-.75.75"
-                                />
-                            </svg>
-                        </button>
                     </div>
                 </div>
                 <div className={`offcanvas offcanvas-start offcanvas-nav ${isMobile ? 'show' : ''}`}>
@@ -91,40 +77,17 @@ export default function Menu() {
                         {/* Mobile CTA Section - Mirrors Desktop Features */}
                         <div className="mobile-cta-section d-lg-none mt-4 pt-4 border-top">
                             <div className="d-flex flex-column gap-3">
-                                {/* Search & Sidebar Actions */}
-                                <div className="d-flex gap-2">
-                                    <button
-                                        onClick={() => {
-                                            setIsSearch(pre => !pre);
-                                            setIsMobile(false);
-                                        }}
-                                        className="btn btn-outline-primary flex-fill d-flex align-items-center justify-content-center gap-2 py-3"
-                                    >
-                                        <i className="fa fa-search"></i>
-                                        <span>Buscar</span>
-                                    </button>
-                                    <button 
-                                        onClick={() => {
-                                            setIsSidebar(pre => !pre);
-                                            setIsMobile(false);
-                                        }}
-                                        className="btn btn-outline-dark flex-fill d-flex align-items-center justify-content-center gap-2 py-3"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="14"
-                                            fill="none"
-                                            viewBox="0 0 14 12"
-                                        >
-                                            <path
-                                                fill="currentColor"
-                                                d="M0 .75Q.063.063.75 0h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 1.437 0 .75m0 5Q.063 5.063.75 5h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 6.437 0 5.75m13.25 5.75H.75q-.687-.063-.75-.75.063-.687.75-.75h12.5q.687.063.75.75-.063.687-.75.75"
-                                            />
-                                        </svg>
-                                        <span>Menú</span>
-                                    </button>
-                                </div>
+                                {/* Search Action */}
+                                <button
+                                    onClick={() => {
+                                        setIsSearch(pre => !pre);
+                                        setIsMobile(false);
+                                    }}
+                                    className="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2 py-3"
+                                >
+                                    <i className="fa fa-search"></i>
+                                    <span>Buscar</span>
+                                </button>
                                 
                                 {/* Primary CTA */}
                                 <Link 

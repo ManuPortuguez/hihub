@@ -253,7 +253,7 @@ export default function OperationSec() {
                                             border: '1px solid rgba(255, 255, 255, 0.07)',
                                             borderLeft: '5px solid #FFC107'
                                         }}>
-                                            <h3 className="h4 mb-3" style={{ color: '#ffffff' }}>
+                                            <h3 className="h6 mb-3" style={{ color: '#ffffff' }}>
                                                 {slide.title}
                                             </h3>
                                             <p className="mb-0" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
@@ -268,7 +268,7 @@ export default function OperationSec() {
                                                 style={{ width: '100%', height: 'auto' }}
                                             />
                                         </div>
-                                        <div className="opt-card rounded-3 p-3" style={{ backgroundColor: '#020e28', border: '2px solid #FFC107' }}>
+                                        <div className="opt-card rounded-3 p-3" style={{ backgroundColor: '#020e28', marginTop: '0' }}>
                                             <span>
                                                 <img src={TabIcon} alt="Icon" style={{ width: '30px', height: '30px' }} />
                                             </span>

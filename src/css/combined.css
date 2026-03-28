@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+
+/*--------------------------------------------------------------
+# template styles
+--------------------------------------------------------------*/
+@import '../css/bootstrap.min.css';
+@import '../css/fancybox.css';
+@import '../css/swiper-bundle.min.css';
+@import '../css/all.min.css';
+@import '../css/jarallax.min.css';
+@import '../css/nice-select.css';
+@import '../css/jquery.datepicker.css';
+@import '../css/jquery.timepicker.min.css';
+@import '../css/style.css';

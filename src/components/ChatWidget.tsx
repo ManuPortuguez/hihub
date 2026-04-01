@@ -28,7 +28,9 @@ export default function ChatWidget() {
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [bookingData, setBookingData] = useState({ name: '', email: '', phone: '' });
   const [appointmentConfirmed, setAppointmentConfirmed] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Detect initial language immediately
   const getInitialLanguage = () => {
@@ -194,6 +196,25 @@ export default function ChatWidget() {
     setIsLoading(false);
   };
 
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPreviewImage(reader.result as string);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const sendImage = () => {
+    if (previewImage) {
+      const base64 = previewImage.split(',')[1];
+      handleSend(base64);
+      setPreviewImage(null);
+    }
+  };
+
   return (
     <div className="hihub-chat-widget-container">
       <button
@@ -350,7 +371,34 @@ export default function ChatWidget() {
 
           {!showCalendar && !appointmentConfirmed && (
             <div className="hihub-input-area">
+              {previewImage && (
+                <div className="hihub-image-preview">
+                  <img src={previewImage} alt="Preview" />
+                  <button onClick={() => setPreviewImage(null)}>×</button>
+                  <button className="hihub-send-image-btn" onClick={sendImage}>
+                    {pageLanguage === 'en' ? 'Send image' : 'Enviar imagen'}
+                  </button>
+                </div>
+              )}
+              
               <div className="hihub-input-row">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  ref={fileInputRef}
+                  style={{ display: 'none' }}
+                />
+                <button 
+                  className="hihub-attach-btn"
+                  onClick={() => fileInputRef.current?.click()}
+                  title={pageLanguage === 'en' ? 'Attach image' : 'Adjuntar imagen'}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                  </svg>
+                </button>
+                
                 <input
                   type="text"
                   value={input}

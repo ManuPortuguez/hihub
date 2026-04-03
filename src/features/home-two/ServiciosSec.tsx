@@ -251,7 +251,8 @@ export default function ServiciosSec() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         zIndex: 9999,
-                        padding: '20px'
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
                     }}
                     onClick={() => setShowModal(false)}
                 >
@@ -263,7 +264,8 @@ export default function ServiciosSec() {
                             width: '100%',
                             maxHeight: '90vh',
                             overflow: 'auto',
-                            position: 'relative'
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out'
                         }}
                         onClick={(e) => e.stopPropagation()}
                     >
@@ -401,7 +403,8 @@ export default function ServiciosSec() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         zIndex: 9999,
-                        padding: '20px'
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
                     }}
                     onClick={() => setShowSourcingModal(false)}
                 >
@@ -413,7 +416,8 @@ export default function ServiciosSec() {
                             width: '100%',
                             maxHeight: '90vh',
                             overflow: 'auto',
-                            position: 'relative'
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out'
                         }}
                         onClick={(e) => e.stopPropagation()}
                     >

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -619,7 +619,7 @@ export default function ServiciosSec() {
                             </div>
 
                             {/* LCL */}
-                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
                                     <Package size={20} color="#FFC107" />
                                     <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
@@ -633,10 +633,68 @@ export default function ServiciosSec() {
                                     </div>
                                     <div style={{ marginBottom: '12px' }}>
                                         <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '8px' }}>Capacidad:</p>
-                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
                                             <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
                                             <p style={{ margin: 0, color: '#ffffff' }}>Desde 1 CBM hasta lo que necesites</p>
                                         </div>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <DollarSign size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Beneficio cliente: Ideal para volúmenes pequeños sin pagar un contenedor completo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* RO-RO */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Truck size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        RO-RO — Vehículos (Roll-on / Roll-off)
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Carga rodada (vehículos, maquinaria con ruedas).</p>
+                                    </div>
+                                    <div style={{ marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '8px' }}>Capacidad:</p>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>Se mide por unidad (vehículo / equipo)</p>
+                                        </div>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <DollarSign size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Beneficio cliente: Evita costos de contenedor para maquinaria o vehículos.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Break Bulk */}
+                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Settings size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Break Bulk — Carga sobredimensionada
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Carga fuera de contenedor (equipos grandes, proyectos).</p>
+                                    </div>
+                                    <div style={{ marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '8px' }}>Capacidad:</p>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>Variable (según peso y dimensiones)</p>
+                                        </div>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <DollarSign size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Beneficio cliente: Permite transportar maquinaria que no cabe en contenedores.</p>
                                     </div>
                                 </div>
                             </div>

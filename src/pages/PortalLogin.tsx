@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { FormEvent } from 'react';
 import SEO from '@/components/elements/SEO';
 import LogoHihub from '@/images/clients/logo-hihub-white.png';
@@ -11,6 +11,20 @@ export default function PortalLogin() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [sentEmail, setSentEmail] = useState('');
+
+  // Load portal widget script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://client-chat-monetizer.replit.app/hihub-chat/portal-widget.js';
+    script.setAttribute('data-api-url', 'https://client-chat-monetizer.replit.app');
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup: remove script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();

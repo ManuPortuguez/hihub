@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
 import EmbalajeImg from '../../../template/images/background/embalaje y volumetria.jpeg';
-import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings, Shield, FileText, CheckCircle } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings, Shield, FileText, CheckCircle, Building2 } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -13,6 +13,7 @@ export default function ServiciosSec() {
     const [showVolumetricsModal, setShowVolumetricsModal] = useState(false);
     const [showPackagingModal, setShowPackagingModal] = useState(false);
     const [showCustomsModal, setShowCustomsModal] = useState(false);
+    const [showLegalModal, setShowLegalModal] = useState(false);
 
     const leftServices = [
         { titleKey: "servicios.air", icon: Globe },
@@ -115,8 +116,9 @@ export default function ServiciosSec() {
                                         onClick={() => {
                                             if (service.titleKey === 'servicios.consulting') setShowVolumetricsModal(true);
                                             if (service.titleKey === 'servicios.packaging') setShowCustomsModal(true);
+                                            if (service.titleKey === 'servicios.maritime') setShowLegalModal(true);
                                         }}
-                                        style={{ cursor: (service.titleKey === 'servicios.consulting' || service.titleKey === 'servicios.packaging') ? 'pointer' : 'default' }}
+                                        style={{ cursor: (service.titleKey === 'servicios.consulting' || service.titleKey === 'servicios.packaging' || service.titleKey === 'servicios.maritime') ? 'pointer' : 'default' }}
                                     >
                                         <span 
                                             className="icon d-flex align-items-center justify-content-center"
@@ -936,6 +938,180 @@ export default function ServiciosSec() {
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
                                         <p style={{ margin: 0, color: '#ffffff' }}>Cumplimiento legal internacional</p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Legal & Financial Modal */}
+            {showLegalModal && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
+                    }}
+                    onClick={() => setShowLegalModal(false)}
+                >
+                    <div 
+                        style={{
+                            backgroundColor: 'white',
+                            borderRadius: '16px',
+                            maxWidth: '750px',
+                            width: '100%',
+                            maxHeight: '90vh',
+                            overflow: 'auto',
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out'
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowLegalModal(false)}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '8px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '8px',
+                                transition: 'background-color 0.2s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        >
+                            <X size={24} color="#000" />
+                        </button>
+
+                        {/* Modal content */}
+                        <div style={{ padding: '32px' }}>
+                            <h2 style={{ color: '#020e28', marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>
+                                Marco Legal y Financiero
+                            </h2>
+                            <p style={{ color: '#6b7280', marginBottom: '24px', fontSize: '14px' }}>
+                                Hihub Global Tech Limited
+                            </p>
+
+                            {/* Estructura bancaria */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Building2 size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Estructura bancaria internacional
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px', fontWeight: 'bold' }}>China · Hong Kong · Singapur</p>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Cuentas operativas en Asia</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Flujo financiero seguro y trazable</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Relación con banca internacional (Citi / JP Morgan)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Respaldo legal */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <FileText size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Respaldo legal internacional
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px', fontWeight: 'bold' }}>Equipos legales en Hong Kong y Shanghai China</p>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Contratos empresa–empresa estructurados correctamente</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Jurisdicción clara y ejecutable</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Protección ante incumplimientos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Valor para el cliente */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Shield size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Valor para el cliente
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Seguridad jurídica real (no promesas)</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Protección contractual desde origen</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Reducción de riesgo financiero</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Diferencia clave */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <AlertTriangle size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Diferencia clave
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Esto no se puede hacer desde fuera de China</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Sin estructura local, no hay control real</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Banking Partners */}
+                            <div style={{ padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px', textAlign: 'center' }}>
+                                <p style={{ margin: 0, color: '#6b7280', fontSize: '12px', marginBottom: '12px', fontWeight: 'bold' }}>SOCIOS BANCARIOS</p>
+                                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+                                    <span style={{ color: '#020e28', fontWeight: 'bold', fontSize: '14px' }}>CITI BANK - HONG KONG</span>
+                                    <span style={{ color: '#6b7280' }}>·</span>
+                                    <span style={{ color: '#020e28', fontWeight: 'bold', fontSize: '14px' }}>JP MORGAN - SINGAPORE</span>
+                                    <span style={{ color: '#6b7280' }}>·</span>
+                                    <span style={{ color: '#020e28', fontWeight: 'bold', fontSize: '14px' }}>CHINA BANK - CHINA</span>
                                 </div>
                             </div>
                         </div>

@@ -201,7 +201,7 @@ const resources = {
       // Servicios Section
       "servicios.subtitle": "Logistics + Business",
       "servicios.title": "Key Elements of International Trade",
-      "servicios.maritime": "Maritime Freight",
+      "servicios.maritime": "Legal & Financial Framework",
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Packaging & Volumetrics",
       "servicios.consulting": "International Transport",
@@ -416,7 +416,7 @@ const resources = {
       // Servicios Section
       "servicios.subtitle": "Logistica + Negocio",
       "servicios.title": "Elementos clave del comercio internacional",
-      "servicios.maritime": "Flete Marítimo",
+      "servicios.maritime": "Marco Legal y Financiero",
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Embalaje y Volumetría",
       "servicios.consulting": "Transporte Internacional",

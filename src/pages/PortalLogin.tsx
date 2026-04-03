@@ -51,7 +51,7 @@ export default function PortalLogin() {
       
       <div style={{
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-        background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+        background: '#020e28',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -69,7 +69,7 @@ export default function PortalLogin() {
         }}>
           {/* Header */}
           <div style={{
-            background: '#1e3a8a',
+            background: '#020e28',
             padding: '28px 32px',
             textAlign: 'center'
           }}>

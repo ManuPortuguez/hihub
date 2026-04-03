@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import SEO from '@/components/elements/SEO';
+import LogoHihub from '@/images/clients/logo-hihub-white.png';
 
 const API_URL = 'https://hihub-agent.onrender.com/api/portal/login';
 
@@ -50,7 +51,7 @@ export default function PortalLogin() {
       
       <div style={{
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-        background: '#f8fafc',
+        background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -68,17 +69,19 @@ export default function PortalLogin() {
         }}>
           {/* Header */}
           <div style={{
-            background: '#0f172a',
+            background: '#1e3a8a',
             padding: '28px 32px',
             textAlign: 'center'
           }}>
-            <h1 style={{
-              color: '#F7941D',
-              fontSize: '24px',
-              fontWeight: 800,
-              letterSpacing: '-0.5px',
-              margin: 0
-            }}>HiHub Trade</h1>
+            <img 
+              src={LogoHihub} 
+              alt="HiHub Trade" 
+              style={{
+                height: '60px',
+                width: 'auto',
+                marginBottom: '8px'
+              }}
+            />
             <p style={{
               color: '#94a3b8',
               fontSize: '13px',

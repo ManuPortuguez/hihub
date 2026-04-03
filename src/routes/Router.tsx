@@ -52,6 +52,10 @@ const ROUTER = createBrowserRouter([
                         path: "/index-2",
                         element: <HomeTwo />,
                     },
+                    {
+                        path: "/portal",
+                        element: <PortalLogin />,
+                    },
                 ],
             },
             {
@@ -178,10 +182,6 @@ const ROUTER = createBrowserRouter([
                     {
                         path: "/contact",
                         element: <Contact />,
-                    },
-                    {
-                        path: "/portal",
-                        element: <PortalLogin />,
                     },
                     {
                         path: "*",

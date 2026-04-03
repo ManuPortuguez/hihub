@@ -49,15 +49,15 @@ export default function PortalLogin() {
     <>
       <SEO title="Portal del Cliente — HiHub Trade" />
       
-      <div style={{
+      <section style={{
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         background: '#020e28',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 100px)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '24px'
+        padding: '80px 24px 60px'
       }}>
         <div style={{
           width: '100%',
@@ -260,7 +260,7 @@ export default function PortalLogin() {
             to { transform: rotate(360deg); }
           }
         `}</style>
-      </div>
+      </section>
     </>
   );
 }

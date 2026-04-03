@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Plane, Truck, Users, Package, LayoutGrid } from 'lucide-react';
+import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
 export default function ServiciosSec() {
     const { t } = useTranslation();
+    const [showModal, setShowModal] = useState(false);
 
     const leftServices = [
         { titleKey: "servicios.air", icon: Plane },
@@ -53,7 +55,11 @@ export default function ServiciosSec() {
                             const IconComponent = service.icon;
                             return (
                                 <FadeInAdvanced key={`left-${index}`} variant="fadeInUp" delay={index * 0.1}>
-                                    <div className="single-choose d-flex align-items-center mb-3">
+                                    <div 
+                                        className="single-choose d-flex align-items-center mb-3"
+                                        onClick={() => service.titleKey === 'servicios.air' && setShowModal(true)}
+                                        style={{ cursor: service.titleKey === 'servicios.air' ? 'pointer' : 'default' }}
+                                    >
                                         <h3 className="display-6 fw-bold mb-0" style={{ color: '#000', fontSize: 'clamp(0.85rem, 3vw, 1.1rem)' }}>
                                             {t(service.titleKey)}
                                         </h3>
@@ -124,7 +130,11 @@ export default function ServiciosSec() {
                     {/* Row 1: Air + Planning */}
                     <div className="col-6">
                         <FadeInAdvanced variant="fadeInUp" delay={0}>
-                            <div className="single-choose d-flex align-items-center justify-content-between p-2" style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px' }}>
+                            <div 
+                                className="single-choose d-flex align-items-center justify-content-between p-2" 
+                                onClick={() => setShowModal(true)}
+                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px', cursor: 'pointer' }}
+                            >
                                 <h3 className="fw-bold mb-0 text-start" style={{ color: '#000', fontSize: '0.8rem', flexGrow: 1, marginRight: '8px' }}>
                                     {t('servicios.air')}
                                 </h3>
@@ -218,6 +228,153 @@ export default function ServiciosSec() {
                     </div>
                 </div>
             </div>
+
+            {/* Incoterms Modal */}
+            {showModal && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                        padding: '20px'
+                    }}
+                    onClick={() => setShowModal(false)}
+                >
+                    <div 
+                        style={{
+                            backgroundColor: 'white',
+                            borderRadius: '16px',
+                            maxWidth: '600px',
+                            width: '100%',
+                            maxHeight: '90vh',
+                            overflow: 'auto',
+                            position: 'relative'
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowModal(false)}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '8px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '8px',
+                                transition: 'background-color 0.2s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        >
+                            <X size={24} color="#000" />
+                        </button>
+
+                        {/* Modal content */}
+                        <div style={{ padding: '32px' }}>
+                            <h2 style={{ color: '#020e28', marginBottom: '24px', fontSize: '24px', fontWeight: 'bold' }}>
+                                INCOTERMS ESENCIALES
+                            </h2>
+
+                            {/* EXW */}
+                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Plane size={20} color="#F7941D" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                        EXW — Ex Works (En fábrica)
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en la fábrica del proveedor</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>El cliente asume todos los costos (transporte, exportación y flete)</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>Mayor riesgo y responsabilidad para el cliente</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}><strong>Uso:</strong> cuando tienes equipo o presencia en origen</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* FOB */}
+                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Ship size={20} color="#F7941D" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                        FOB — Free On Board
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en el puerto (ej: Shanghai / Ningbo)</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>El proveedor cubre hasta que la mercancía se carga al barco</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>Buen balance entre control y costo</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>El más recomendado</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* CIF */}
+                            <div style={{ padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Ship size={20} color="#F7941D" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                        CIF — Cost, Insurance & Freight
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en el puerto de destino</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>El proveedor cubre transporte y seguro</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}>Menor control sobre costos y logística</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#374151' }}><strong>Uso:</strong> Más simple de ejecutar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

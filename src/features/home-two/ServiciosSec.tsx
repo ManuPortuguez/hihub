@@ -464,7 +464,7 @@ export default function ServiciosSec() {
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <Zap size={16} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Complejidad: Rápido</p>
+                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Rapidez y ejecución inmediata</p>
                                     </div>
                                 </div>
                             </div>
@@ -484,7 +484,7 @@ export default function ServiciosSec() {
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <Scale size={16} color="#f59e0b" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Complejidad: Medio</p>
+                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Personalización y diferenciación</p>
                                     </div>
                                 </div>
                             </div>
@@ -504,7 +504,7 @@ export default function ServiciosSec() {
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <Flame size={16} color="#ef4444" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Complejidad: Alto</p>
+                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Exclusividad y control total</p>
                                     </div>
                                 </div>
                             </div>

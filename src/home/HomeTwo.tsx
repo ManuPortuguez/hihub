@@ -7,7 +7,6 @@ import ServiciosSec from "@/features/home-two/ServiciosSec";
 import VideoSec2 from "@/features/home-two/VideoSec2";
 import TestimonialsSec from "@/features/home-two/TestimonialsSec";
 import OperationSec from "@/features/home-two/OperationSec";
-import ChatWidget from "@/components/ChatWidget";
 
 export default function HomeTwo() {
     return (
@@ -27,8 +26,6 @@ export default function HomeTwo() {
                 <TestimonialsSec />
 
                 <OperationSec />
-
-                <ChatWidget />
             </ErrorBoundary>
         </>
     );

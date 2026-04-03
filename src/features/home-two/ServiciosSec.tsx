@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
 import EmbalajeImg from '../../../template/images/background/embalaje y volumetria.jpeg';
-import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings, Shield, FileText, CheckCircle, Building2 } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings, Shield, FileText, CheckCircle, Building2, Landmark } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -24,7 +24,7 @@ export default function ServiciosSec() {
     const rightServices = [
         { titleKey: "servicios.consulting", icon: Users },
         { titleKey: "servicios.packaging", icon: Package },
-        { titleKey: "servicios.maritime", icon: Ship }
+        { titleKey: "servicios.maritime", icon: Landmark }
     ];
 
     return (

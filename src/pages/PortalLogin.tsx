@@ -17,6 +17,8 @@ export default function PortalLogin() {
     const script = document.createElement('script');
     script.src = 'https://client-chat-monetizer.replit.app/hihub-chat/portal-widget.js';
     script.setAttribute('data-api-url', 'https://client-chat-monetizer.replit.app');
+    script.setAttribute('data-primary-color', '#F7941D');
+    script.setAttribute('data-label', 'Mis pedidos');
     script.async = true;
     document.body.appendChild(script);
 

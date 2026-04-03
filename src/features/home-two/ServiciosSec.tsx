@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X } from 'lucide-react';
+import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -291,7 +291,7 @@ export default function ServiciosSec() {
                             {/* EXW */}
                             <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Plane size={20} color="#F7941D" />
+                                    <Factory size={20} color="#F7941D" />
                                     <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
                                         EXW — Ex Works (En fábrica)
                                     </h3>
@@ -319,7 +319,7 @@ export default function ServiciosSec() {
                             {/* FOB */}
                             <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Ship size={20} color="#F7941D" />
+                                    <Anchor size={20} color="#F7941D" />
                                     <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
                                         FOB — Free On Board
                                     </h3>

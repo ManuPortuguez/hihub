@@ -292,90 +292,93 @@ export default function ServiciosSec() {
 
                         {/* Modal content */}
                         <div style={{ padding: '32px' }}>
-                            <h2 style={{ color: '#020e28', marginBottom: '24px', fontSize: '24px', fontWeight: 'bold' }}>
+                            <h2 style={{ color: '#020e28', marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>
                                 INCOTERMS ESENCIALES
                             </h2>
+                            <p style={{ color: '#6b7280', marginBottom: '24px', fontSize: '14px' }}>
+                                Hihub Global Tech Limited
+                            </p>
 
                             {/* EXW */}
-                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px' }}>
+                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Factory size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Factory size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         EXW — Ex Works (En fábrica)
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en la fábrica del proveedor</p>
+                                        <MapPin size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Entrega:</strong> en la fábrica del proveedor</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>El cliente asume todos los costos (transporte, exportación y flete)</p>
+                                        <DollarSign size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>El cliente asume todos los costos (transporte, exportación y flete)</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>Mayor riesgo y responsabilidad para el cliente</p>
+                                        <AlertTriangle size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Mayor riesgo y responsabilidad para el cliente</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Uso:</strong> cuando tienes equipo o presencia en origen</p>
+                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Uso:</strong> cuando tienes equipo o presencia en origen</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* FOB */}
-                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#f0fdf4', borderRadius: '12px' }}>
+                            <div style={{ marginBottom: '24px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Anchor size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Anchor size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         FOB — Free On Board
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en el puerto (ej: Shanghai / Ningbo)</p>
+                                        <MapPin size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Entrega:</strong> en el puerto (ej: Shanghai / Ningbo)</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>El proveedor cubre hasta que la mercancía se carga al barco</p>
+                                        <DollarSign size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>El proveedor cubre hasta que la mercancía se carga al barco</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>Buen balance entre control y costo</p>
+                                        <AlertTriangle size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Buen balance entre control y costo</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>El más recomendado</p>
+                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>El más recomendado</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* CIF */}
-                            <div style={{ padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px' }}>
+                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Ship size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Ship size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         CIF — Cost, Insurance & Freight
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <MapPin size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Entrega:</strong> en el puerto de destino</p>
+                                        <MapPin size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Entrega:</strong> en el puerto de destino</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <DollarSign size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>El proveedor cubre transporte y seguro</p>
+                                        <DollarSign size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>El proveedor cubre transporte y seguro</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <AlertTriangle size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}>Menor control sobre costos y logística</p>
+                                        <AlertTriangle size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Menor control sobre costos y logística</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <ArrowRight size={16} color="#F7941D" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Uso:</strong> Más simple de ejecutar</p>
+                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Uso:</strong> Más simple de ejecutar</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor } from 'lucide-react';
+import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -10,7 +10,7 @@ export default function ServiciosSec() {
     const [showModal, setShowModal] = useState(false);
 
     const leftServices = [
-        { titleKey: "servicios.air", icon: Plane },
+        { titleKey: "servicios.air", icon: Globe },
         { titleKey: "servicios.planning", icon: LayoutGrid },
         { titleKey: "servicios.ground", icon: Truck }
     ];
@@ -142,7 +142,7 @@ export default function ServiciosSec() {
                                     className="icon d-flex align-items-center justify-content-center"
                                     style={{ backgroundColor: '#FFC107', width: '40px', height: '40px', borderRadius: '6px' }}
                                 >
-                                    <Plane size={20} color="#000" strokeWidth={2} />
+                                    <Globe size={20} color="#000" strokeWidth={2} />
                                 </span>
                             </div>
                         </FadeInAdvanced>

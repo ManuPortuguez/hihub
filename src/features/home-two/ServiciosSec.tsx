@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Plane, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 

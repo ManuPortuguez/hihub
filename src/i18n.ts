@@ -202,11 +202,11 @@ const resources = {
       "servicios.subtitle": "Logistics + Business",
       "servicios.title": "Key Elements of International Trade",
       "servicios.maritime": "Maritime Freight",
-      "servicios.air": "ESSENTIAL INCOTERMS",
+      "servicios.air": "Incoterms esenciales",
       "servicios.ground": "Ground Transport",
       "servicios.consulting": "Air Consulting",
       "servicios.packaging": "Packaging & Handling",
-      "servicios.planning": "SOURCING/MANUFACTURING",
+      "servicios.planning": "Sourcing/Manufacturing",
 
       // Footer
       "footer.quickLinks": "Quick Links",
@@ -417,11 +417,11 @@ const resources = {
       "servicios.subtitle": "Logistica + Negocio",
       "servicios.title": "Elementos clave del comercio internacional",
       "servicios.maritime": "Flete Marítimo",
-      "servicios.air": "INCOTERMS ESENCIALES",
+      "servicios.air": "Incoterms esenciales",
       "servicios.ground": "Transporte Terrestre",
       "servicios.consulting": "Consultoría Aérea",
       "servicios.packaging": "Embalaje y Manejo",
-      "servicios.planning": "SOURCING/FABRICACIÓN",
+      "servicios.planning": "Sourcing/Fabricación",
 
       // Footer
       "footer.quickLinks": "Enlaces Rápidos",

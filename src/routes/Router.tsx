@@ -33,6 +33,7 @@ import BlogClassic from "@/pages/BlogClassic";
 import SinglePost from "@/pages/SinglePost";
 import SinglePost2 from "@/pages/SinglePost2";
 import Contact from "@/pages/Contact";
+import PortalLogin from "@/pages/PortalLogin";
 import DefaultLayout from "@/layouts/DefaultLayout";
 
 const ROUTER = createBrowserRouter([
@@ -177,6 +178,10 @@ const ROUTER = createBrowserRouter([
                     {
                         path: "/contact",
                         element: <Contact />,
+                    },
+                    {
+                        path: "/portal",
+                        element: <PortalLogin />,
                     },
                     {
                         path: "*",

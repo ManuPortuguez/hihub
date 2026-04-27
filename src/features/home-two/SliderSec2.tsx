@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCreative } from 'swiper/modules';
-import HeroImg from "@/images/Hero.jpg";
+import HeroImg from "../../../template/images/hero hihub.png";
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
 
 export default function SliderSec2() {
